@@ -1,0 +1,197 @@
+/*
+Author: Colby Adams
+File Name: styles.css
+Date: 9/11/2024
+*/
+
+/*CSS Reset*/
+
+body, header, nav, main, footer, img, h1, h3 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h1, h3 {
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Style rules for body and images,*/
+body {
+    background: linear-gradient(#7f008a, rgb(255, 191, 244))
+}
+img, video {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Style rules for mobile*/
+
+/*Style rules to show mobile class and hide tab-desk class*/
+.mobile {
+    display: block;
+}
+.tab-desk {
+    display: none;
+}
+
+/*Style rules for header area*/
+.mobile h3 {
+    padding: 2%;
+    text-align: center;
+    font-family: "Sofadi One";
+}
+.mobile h1 {
+    padding: 2%;
+    text-align: center;
+    font-family: "Sofadi One";
+}
+
+/*Style rules for navigation area,*/
+nav {
+    background-color:#7f008a;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+nav li { 
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+nav li a {
+    display: block;
+    color: #f6eee4;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-decoration: none;
+}
+header {
+    background-color:rgb(255, 191, 244)
+}
+
+/*Style rules for main content*/
+main {
+    padding: 2%;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+main p {
+    font-size: 1.5em;  
+}
+main h3 {
+    padding-top: 2%;
+}
+main ul {
+    list-style-type: square;
+}
+main dt {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+.center {
+    width: 45%;
+    height: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+dt {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    color: rgb(51, 0, 39);
+}
+
+/*Style rules for class and id selectors*/
+
+
+/*Style rules for footer content*/
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    background-color: #7f008a;
+    color: #f6eee4;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+footer a {
+    color:  #f3e6d8;
+    text-decoration: none;
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 620px), print {
+    /*Tablet Viewport: Show tab-desk class, hide mobile class*/
+       .tab-desk{
+           display: none;
+       }
+   
+       .mobile{
+           display: block;
+       }
+   
+       /*Tablet Viewport: Style rules for nav area*/
+       nav li{
+           border-top: none;
+           display: inline-block;
+           font-size: 1.25em;
+       }
+   
+       nav li a{
+           padding: 0.5em;
+       }
+   }
+   
+   /*Media Query for Desktop Viewport*/
+   @media screen and (min-width: 1000px), print {
+   /*Desktop Viewport: Style rules for nav area*/
+   nav li{
+       font-size: 1.5em;
+   }
+   nav li a{
+       padding-top: 0.5em;
+       padding-bottom: 0.5em;
+       padding-left: 1.5em;
+       padding-right: 1.5em;
+   }
+   nav li a:hover{
+       color: #7f008a;
+       background-color: rgb(255,191,244);
+   }
+   .mobile {
+    display: none;
+    }
+    .tab-desk{
+    display: block;
+    }
+   /*Desktop Viewport: Style rules for main content.*/
+   #info ul{
+       margin-left: 5%;
+   }
+   }
+   /*Media Query for Large Desktop Viewports*/
+   @media screen and (min-width: 1921px), print {
+    body {
+        background: linear-gradient(#7f008a, rgb(255, 191, 244))
+    }
+    .mobile {
+        display: none;
+    }
+    .tab-desk{
+        display: block;
+    }
+   }
